@@ -8217,9 +8217,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4110167230048167509, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
+      propertyPath: Flt_jumpSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6028658477829630723, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
       propertyPath: m_Name
       value: Ginger (Player)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8551014990642148922, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
+      propertyPath: m_GravityScale
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 8930220185223693154, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
       propertyPath: m_LocalPosition.x
