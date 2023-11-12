@@ -14,12 +14,14 @@ public class PlayerMovementScript : MonoBehaviour
     Rigidbody2D myRigidbody;
     Animator myAnimator;
     CapsuleCollider2D myCapsuleCollider;
+    float Flt_gravityScaleAtStart;
 
     void Start()
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnimator = GetComponent<Animator>();
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
+        Flt_gravityScaleAtStart = myRigidbody.gravityScale;
     }
 
 
@@ -74,12 +76,15 @@ public class PlayerMovementScript : MonoBehaviour
     {
         if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
+            myRigidbody.gravityScale = Flt_gravityScaleAtStart;
             return;
         }
 
         Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, moveInput.y * Flt_ClimbSpeed);
 
         myRigidbody.velocity = climbVelocity;
+
+        myRigidbody.gravityScale = 0f;
     }
 
 }
