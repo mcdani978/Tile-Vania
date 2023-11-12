@@ -56,15 +56,15 @@ public class PlayerMovementScript : MonoBehaviour
         Vector2 playerVelocity = new Vector2(moveInput.x * Flt_runSpeed, myRigidbody.velocity.y);
         myRigidbody.velocity = playerVelocity;
 
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-        myAnimator.SetBool("isRunning", playerHasHorizontalSpeed);
+        bool Bol_playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        myAnimator.SetBool("isRunning", Bol_playerHasHorizontalSpeed);
     }
 
     void FlipSprite()
     {
-        bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+        bool Bol_playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
 
-        if (playerHasHorizontalSpeed)
+        if (Bol_playerHasHorizontalSpeed)
         {
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }
@@ -77,6 +77,7 @@ public class PlayerMovementScript : MonoBehaviour
         if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             myRigidbody.gravityScale = Flt_gravityScaleAtStart;
+            myAnimator.SetBool("isClimbing", false);
             return;
         }
 
@@ -85,6 +86,9 @@ public class PlayerMovementScript : MonoBehaviour
         myRigidbody.velocity = climbVelocity;
 
         myRigidbody.gravityScale = 0f;
+
+        bool Bol_playerHasVerticalSpeed = Mathf.Abs(myRigidbody.velocity.y) > Mathf.Epsilon;
+        myAnimator.SetBool("isClimbing", Bol_playerHasVerticalSpeed);
     }
 
 }
