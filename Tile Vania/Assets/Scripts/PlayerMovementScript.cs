@@ -7,7 +7,9 @@ public class PlayerMovementScript : MonoBehaviour
 {
     [SerializeField] float Flt_runSpeed = 10f;
     [SerializeField] float Flt_jumpSpeed = 5f;
-    
+    [SerializeField] float Flt_ClimbSpeed = 5f;
+
+
     Vector2 moveInput;
     Rigidbody2D myRigidbody;
     Animator myAnimator;
@@ -20,11 +22,12 @@ public class PlayerMovementScript : MonoBehaviour
         myCapsuleCollider = GetComponent<CapsuleCollider2D>();
     }
 
-    
+
     void Update()
     {
         Run();
         FlipSprite();
+        ClimbLadder();
     }
 
     void OnMove(InputValue value)
@@ -34,12 +37,12 @@ public class PlayerMovementScript : MonoBehaviour
 
     void OnJump(InputValue Value)
     {
-        if(!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
         {
             return;
         }
 
-        if(Value.isPressed)
+        if (Value.isPressed)
         {
             //do stuff
             myRigidbody.velocity += new Vector2(0f, Flt_jumpSpeed);
@@ -48,7 +51,7 @@ public class PlayerMovementScript : MonoBehaviour
 
     void Run()
     {
-        Vector2 playerVelocity = new Vector2 (moveInput.x * Flt_runSpeed, myRigidbody.velocity.y);
+        Vector2 playerVelocity = new Vector2(moveInput.x * Flt_runSpeed, myRigidbody.velocity.y);
         myRigidbody.velocity = playerVelocity;
 
         bool playerHasHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
@@ -64,4 +67,23 @@ public class PlayerMovementScript : MonoBehaviour
             transform.localScale = new Vector2(Mathf.Sign(myRigidbody.velocity.x), 1f);
         }
     }
+
+
+
+    void ClimbLadder()
+    {
+        if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        {
+            return;
+        }
+
+        Vector2 climbVelocity = new Vector2(myRigidbody.velocity.x, moveInput.y * Flt_ClimbSpeed);
+
+        myRigidbody.velocity = climbVelocity;
+    }
+
 }
+
+        
+    
+    
