@@ -14288,7 +14288,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.052656, y: 1.0922515, z: -10}
+  m_LocalPosition: {x: -6.7437325, y: 1.163902, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19433,29 +19433,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1736075657376745302, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 24a7aa1cffe7c6e4082d8d50ed80546b, type: 2}
-    - target: {fileID: 4110167230048167509, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
-      propertyPath: Flt_jumpSpeed
-      value: 25
+    - target: {fileID: 3939594056635080165, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5289377
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939594056635080165, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
+      propertyPath: m_Size.y
+      value: 0.17982143
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939594056635080165, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.040112957
+      objectReference: {fileID: 0}
+    - target: {fileID: 3939594056635080165, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.46135584
       objectReference: {fileID: 0}
     - target: {fileID: 6028658477829630723, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
       propertyPath: m_Name
       value: Ginger (Player)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6028658477829630723, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8551014990642148922, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
-      propertyPath: m_GravityScale
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8551014990642148922, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8930220185223693154, guid: 3edb2f62f7b8adf46adbf062541705a0, type: 3}
       propertyPath: m_LocalPosition.x
