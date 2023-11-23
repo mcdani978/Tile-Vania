@@ -219,7 +219,9 @@ MonoBehaviour:
   Flt_runSpeed: 10
   Flt_jumpSpeed: 25
   Flt_ClimbSpeed: 5
-  deathKick: {x: 10, y: 10}
+  deathKick: {x: 20, y: 20}
+  bullet: {fileID: 8206187279555644373, guid: 08f30d3079ae62c49bb5ef0988d3c105, type: 3}
+  gun: {fileID: 3133238530686708793}
 --- !u!61 &3939594056635080165
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -229,7 +231,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 6028658477829630723}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 24a7aa1cffe7c6e4082d8d50ed80546b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -252,7 +254,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0486575, y: -0.43572256}
+  m_Offset: {x: -0.040112957, y: -0.46135584}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -263,7 +265,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5118486, y: 0.12855488}
+  m_Size: {x: 0.5289377, y: 0.17982143}
   m_EdgeRadius: 0
 --- !u!1 &8307660232980183238
 GameObject:
@@ -290,7 +292,7 @@ Transform:
   m_GameObject: {fileID: 8307660232980183238}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.183, y: -0.125, z: 0}
+  m_LocalPosition: {x: 0.219, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
